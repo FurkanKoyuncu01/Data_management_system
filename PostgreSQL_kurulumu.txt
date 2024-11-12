@@ -1,0 +1,19 @@
+sudo apt update
+sudo apt install -y postgresql postgresql-contrib
+
+
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+
+
+PostgreSQL'in varsayılan postgres kullanıcısı ile PostgreSQL konsoluna giriş yapın:
+sudo -i -u postgres
+psql
+
+açılan komut penceresinde database oluşturma , kullanıcı oluşturma ve yetki verme işlemleri
+
+CREATE DATABASE data_management_system;
+CREATE USER data_manager WITH PASSWORD 'data_manager';
+GRANT ALL PRIVILEGES ON DATABASE data_management_system TO data_manager;
+
+
